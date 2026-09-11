@@ -1,0 +1,4 @@
+web: uvicorn main:app --reload --port 8000
+worker: celery -A worker.celery_app worker --loglevel=info
+simulator: python3 simulator.py
+
